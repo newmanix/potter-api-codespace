@@ -1,6 +1,6 @@
-# php-ajax-codespace
-A starter repo for building a PHP enabled CodeSpace
-This is a simple setup for running PHP with AJAX inside GitHub Codespaces.
+# bond-api-codespace
+A repo to use as a PHP API James Bond Film Web Service CodeSpace
+Use this to practice consuming a web service via a GitHub Page, etc.
 
 ## Getting Started
 
@@ -9,12 +9,14 @@ This is a simple setup for running PHP with AJAX inside GitHub Codespaces.
 3. Wait for Codespaces to initialize.
 4. The PHP server will start automatically on port 3000.
 5. Click the "Ports" tab in Codespaces and "Open in Browser".
+6. View raw Release date sorted JSON data by providing the url >> api.php
+7. View raw Box Office sorted JSON data by providing the url >> api.php?cat=box
 
-Now you're ready to test `index.html` and AJAX to `server.php`.
+Now you're ready to consume a web service using a JS enabled web page.
 
 ## What's Included
 
 - PHP 8.2 (via Docker)
 - Built-in server on port 3000
 - Forwarded port for testing
-- AJAX fetch example
+- PHP API to be consumed as a web service
