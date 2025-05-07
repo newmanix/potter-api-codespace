@@ -1,5 +1,5 @@
-# bond-api-codespace
-A repo to use as a PHP API James Bond Film Web Service CodeSpace
+# potter-api-codespace
+A repo to use as a PHP API Harry Potter Web Service CodeSpace
 Use this to practice consuming a web service via a GitHub Page, etc.
 
 ## Getting Started
