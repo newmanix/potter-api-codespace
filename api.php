@@ -2,28 +2,17 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
-if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
-    http_response_code(405);
-    echo json_encode(["error" => "Only GET method is supported."]);
-    exit;
+if(isset($_REQUEST['spell']))
+{//check to be sure data has been transmitted via GET or POST
+	switch($_REQUEST['spell'])
+	{//determine contents of 'cat'
+        case 'patronus':
+        case 'please':    
+            include('data/potter.js'); //sorting to be done client side
+            break;
+        default:
+			echo 'That is not the magic word!';
+	}
+}else{//if not data sent, inform calling application
+	echo "Incorrect parameter sent";
 }
-
-$cat = $_GET['cat'] ?? 'year';
-
-switch ($cat) {
-    case "box":
-        $file = 'data/bond-box-office.js';
-        break;
-    case "year":
-    default:
-        $file = 'data/bond-year.js';
-        break;
-}
-
-if (file_exists($file)) {
-    include($file);
-} else {
-    http_response_code(404);
-    echo json_encode(["error" => "Requested data file not found."]);
-}
-?>
